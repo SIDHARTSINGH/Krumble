@@ -63,7 +63,7 @@ function HomeTabs() {
             )
           }}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           name="MapScreen"
           component={MapScreen}
           options={{
@@ -80,7 +80,7 @@ function HomeTabs() {
               />
             )
           }}
-        />
+        /> */}
       </Tab.Navigator>
     </NavigationContainer>
   )

@@ -23,7 +23,7 @@ import {
 import {SCALER} from '../utils'
 import {images, purpleCrumIcon} from '../../../assets'
 import {CurrentLocationButton} from './CurrentLocationButton'
-import {GOOGLE_API_KEY} from '../../../secretDom'
+// import {GOOGLE_API_KEY} from '../../../secrets'
 import polyline from '@mapbox/polyline'
 // import {Button} from 'react-native-paper'
 
@@ -68,9 +68,9 @@ class DisMapScreen extends Component {
 
   async getDirections(startLoc, desLoc) {
     try {
-      const resp = await fetch(
-        `https://maps.googleapis.com/maps/api/directions/json?origin=${startLoc}&destination=${desLoc}&key=${GOOGLE_API_KEY}`
-      )
+      // const resp = await fetch(
+      //   `https://maps.googleapis.com/maps/api/directions/json?origin=${startLoc}&destination=${desLoc}&key=${GOOGLE_API_KEY}`
+      // )
       const respJson = await resp.json()
 
       const response = respJson.routes[0]
