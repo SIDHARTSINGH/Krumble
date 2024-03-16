@@ -17,6 +17,6 @@ npm-debug.log
 yarn-error.log
 secretDom.js
 secrets.js
-# macOS
 .DS_Store
 node_modules
+.env**
