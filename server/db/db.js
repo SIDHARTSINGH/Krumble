@@ -12,9 +12,16 @@ const pkg = require('../../package.json')
 // )
 
 const db = new Sequelize(
-  'postgres://postgres:password@localhost:5432/krumble_db',
+  // 'postgres://postgres:password@localhost:5432/krumble_db',
+  'postgres://default:HwQ8POYM4eoS@ep-mute-limit-a4x68vx5.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require',
   {
-    dialect: 'postgres'
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // This is optional. You can set it to 'true' if you'd like to enforce SSL certificates.
+      }
+    }
   }
 )
 module.exports = db
